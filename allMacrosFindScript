@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MYFILE=$1
+grep '#define' $MYFILE | sed 's|.*#define ||' | sed 's|\s.*||' | sort | uniq
+exit 0
